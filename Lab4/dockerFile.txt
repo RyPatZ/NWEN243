@@ -1,0 +1,6 @@
+FROM openjdk:8
+COPY *.java /usr/src/jokes/
+WORKDIR /usr/src/jokes
+RUN javac JokeServer.java
+EXPOSE 5000
+CMD ["java", "JokeServer"]
